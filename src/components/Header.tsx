@@ -7,7 +7,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ active }) => {
   return (
     <header className="bg-[#fff2df] fixed z-[9999] flex items-center justify-around px-10 py-5 w-full h-20">
-      <ul className="flex gap-5">
+      <ul className="flex  gap-5">
         <li>
           <a
             href="#"
