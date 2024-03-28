@@ -3,7 +3,27 @@ import Header from "@/components/Header";
 import AboutBox from "@/components/home/AboutBox";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
+import Footer from "@/components/Footer";
+
+const products = [
+  {
+    name: "Product 1",
+    img: "https://www.thegiftingmarketplace.in/cdn/shop/products/Addaheading_10_a4ce2ed0-c78e-4db5-9b51-acdd9509f813.png?v=1681453844",
+  },
+  {
+    name: "Product 2",
+    img: "https://5.imimg.com/data5/SELLER/Default/2023/7/321446208/QX/SP/ER/1801251/jute-flower-bags-500x500.png",
+  },
+  {
+    name: "Product 3",
+    img: "https://www.promotionalwears.com/image/cache/catalog/data/eco-friendly/bags/pjb005-front-img-500x500.jpg",
+  },
+  {
+    name: "Product 4",
+    img: "https://corporate.goshopia.com/wp-content/uploads/2022/08/32-Jute-Bags-scaled.jpg",
+  },
+];
 
 export default function Home() {
   return (
@@ -55,27 +75,34 @@ export default function Home() {
             WhatsApp
           </p>
           <Swiper
-            slidesPerView={"auto"}
-            centeredSlides={true}
-            spaceBetween={30}
+            slidesPerView={3}
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
-            className="mySwiper"
+            modules={[Pagination, Autoplay]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            className="mySwiper mt-10"
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            {products.map((product) => (
+              <SwiperSlide>
+                <img src={product.img} alt="" />
+                <div className="absolute inset-0 bg-black opacity-0 gap-5 hover:opacity-100 hover:bg-opacity-50 flex flex-col hover:backdrop-blur-lg items-center justify-center transition-all duration-150 ease-in-out cursor-pointer">
+                  <h1 className="garamond text-white text-5xl">
+                    {product.name}
+                  </h1>
+                  <a href="#" className="btn">
+                    Connect with us
+                  </a>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

@@ -84,11 +84,7 @@ const Header: React.FC<HeaderProps> = ({ active }) => {
           </a>
         </li>
       </ul>
-      <img
-        src="https://static.wixstatic.com/media/93357b_75827e15af594063927fa26ea7565555~mv2.png/v1/fill/w_253,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Logo%20Dark_edited.png"
-        alt=""
-        className="h-14"
-      />
+      <img src="./logo.png" alt="" className="h-14" />
     </header>
   );
 };
