@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutBox = () => {
   return (
-    <div className="flex justify-center items-center w-full h-[40vh]">
-      <p className="text-center w-3/4 leading-relaxed text-lg text-[#6F4119]">
+    <div className="flex justify-center items-center w-full h-[70vh] sm:h-[40vh]">
+      <p className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
         <b>Oofy Jute</b> is a Market Leader in providing variety of world class
         Jute Bags and has also emerged as one of India's Leading Home Furnishing
         & Lifestyle Products Brand designer offering premium and designer

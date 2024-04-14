@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Pagination, Autoplay } from "swiper/modules";
 import Footer from "@/components/Footer";
-import SlideHome from "@/components/home/slide";
 
 const products = [
   {
@@ -27,6 +26,17 @@ const products = [
 ];
 
 export default function Home() {
+  const SwiperSlidesPerView = () => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth > 1024) {
+        return 4;
+      } else if (window.innerWidth > 768) {
+        return 3;
+      } else {
+        return 1;
+      }
+    }
+  };
   return (
     <main>
       <Header active="home" />
@@ -48,7 +58,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 text-[#fff2df] flex flex-col gap-10 items-center justify-center">
           <h1 className="text-6xl font-bold">About Us</h1>
-          <p className="text-center w-3/4 leading-relaxed text-lg">
+          <p className="text-center w-[90%] sm:w-3/4 leading-relaxed text-lg">
             <b>Oofy Jute</b> is one of the most Trusted name for High-Quality
             Jute Bags, Luxury Trays, Jute Baskets & more. Oofy Jute is a Market
             Leader in providing variety of world class Jute Bags and has also
@@ -76,7 +86,7 @@ export default function Home() {
             WhatsApp
           </p>
           <Swiper
-            slidesPerView={3}
+            slidesPerView={SwiperSlidesPerView()}
             pagination={{
               clickable: true,
             }}
@@ -88,7 +98,17 @@ export default function Home() {
             className="mySwiper mt-10"
           >
             {products.map((product) => (
-              <SlideHome key={product.name} product={product} />
+              <SwiperSlide>
+                <img src={product.img} alt="" />
+                <div className="absolute inset-0 bg-black opacity-0 gap-5 hover:opacity-100 hover:bg-opacity-50 flex flex-col hover:backdrop-blur-lg items-center justify-center transition-all duration-150 ease-in-out cursor-pointer">
+                  <h1 className="garamond text-white text-5xl">
+                    {product.name}
+                  </h1>
+                  <a href="#" className="btn">
+                    Connect with us
+                  </a>
+                </div>
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>

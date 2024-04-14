@@ -6,11 +6,14 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ active }) => {
   return (
-    <header className="bg-[#fff2df] fixed z-[9999] flex items-center justify-around px-10 py-5 w-full h-20">
-      <ul className="flex  gap-5">
+    <header className="bg-[#fff2df] z-[9999] sm:flex-row flex-col flex items-center justify-around px-0 sm:px-10 py-5 w-full">
+      <div className="flex items-center justify-center sm:justify-between w-full px-4 sm:px-0">
+        <img src="./logo.png" alt="" className="h-14" />
+      </div>
+      <ul className="sm:flex hidden w-[50%] gap-5">
         <li>
           <a
-            href="#"
+            href="/"
             className={`garamond text-[1.2rem] font-semibold 
             ${
               active === "home"
@@ -28,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ active }) => {
         </li>
         <li>
           <a
-            href="#"
+            href="/products"
             className={`garamond text-[1.2rem] font-semibold 
             ${
               active === "product"
@@ -38,8 +41,9 @@ const Header: React.FC<HeaderProps> = ({ active }) => {
             border-t-[1px] hover:border-black
             tracking-[0.05rem]
             py-2 px-4
+            whitespace-nowrap
             transition-all duration-300 ease-in-out
-
+            
             `}
           >
             Our Products
@@ -47,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ active }) => {
         </li>
         <li>
           <a
-            href="#"
+            href="/about"
             className={`garamond text-[1.2rem] font-semibold 
             ${
               active === "about"
@@ -57,8 +61,10 @@ const Header: React.FC<HeaderProps> = ({ active }) => {
             border-t-[1px] hover:border-black
             tracking-[0.05rem]
             py-2 px-4
-            transition-all duration-300 ease-in-out
+            whitespace-nowrap
 
+            transition-all duration-300 ease-in-out
+            
             `}
           >
             About Us{" "}
@@ -66,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ active }) => {
         </li>
         <li>
           <a
-            href="#"
+            href="/contact"
             className={`garamond text-[1.2rem] font-semibold 
             ${
               active === "contact"
@@ -76,15 +82,38 @@ const Header: React.FC<HeaderProps> = ({ active }) => {
             border-t-[1px] hover:border-black
             tracking-[0.05rem]
             py-2 px-4
-            transition-all duration-300 ease-in-out
+            whitespace-nowrap
 
+            transition-all duration-300 ease-in-out
+            
             `}
           >
             Contact Us{" "}
           </a>
         </li>
       </ul>
-      <img src="./logo.png" alt="" className="h-14" />
+      <ul className="sm:hidden flex flex-col text-2xl">
+        <li>
+          <a href="/" className="garamond">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/product" className="garamond">
+            Product
+          </a>
+        </li>
+        <li>
+          <a href="/about" className="garamond">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/contact" className="garamond">
+            Contact
+          </a>
+        </li>
+      </ul>
     </header>
   );
 };
