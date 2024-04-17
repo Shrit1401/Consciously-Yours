@@ -59,18 +59,16 @@ export default function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-50 text-[#fff2df] flex flex-col gap-10 items-center justify-center">
           <h1 className="text-6xl font-bold">About Us</h1>
           <p className="text-center w-[90%] sm:w-3/4 leading-relaxed text-lg">
-            <b>Oofy Jute</b> is one of the most Trusted name for High-Quality
-            Jute Bags, Luxury Trays, Jute Baskets & more. Oofy Jute is a Market
-            Leader in providing variety of world class Jute Bags and has also
-            emerged as one of India's Leading Home Decor & Lifestyle Products
-            Brand designer offering premium and designer products across
-            multiple other categories, <br />
-            <b>
-              {" "}
-              Our Focus is to provide the best quality, best prices, and timely
-              delivery of world class Jute Bags and more Premium Eco-Friendly &
-              Fashionable Products to our customers in India and Globally.
-            </b>
+            Embrace eco-luxury at Consciously Yours India. Where every jute bag
+            tells a story of ethical elegance and environmental responsibility.
+            <br />
+            From timeless classics to contemporary marvels, our curated
+            collection embodies the essence of India's golden fibre, offering a
+            glimpse into the soul of a nation. We take pride in showcasing the
+            finest creations, handcrafted with love, and exported with care to
+            adorn shoulders worldwide.
+            <br /> Explore export opportunities from India with us and let's
+            unite as Vasudhaiva Kutumbakam 'One Earth, One Family'.
           </p>
           <a href="#" className="btn">
             Know More About Us
@@ -81,9 +79,17 @@ export default function Home() {
       <div className="my-16">
         <div className="flex gap-2 justify-center flex-col items-center">
           <h1 className="text-4xl font-semibold">Our Products</h1>
-          <p>
-            Click on the product you like to connect with us directly over
-            WhatsApp
+          <p className="text-center">
+            Select your desired product to initiate direct communication with us
+            via WhatsApp.
+            <br /> You may also direct your inquiries to our team by contacting
+            us at{" "}
+            <a
+              className="underline underline-offset-4"
+              href="mailto:Consciously.yours111@gmail.com "
+            >
+              Consciously.yours111@gmail.com{" "}
+            </a>{" "}
           </p>
           <Swiper
             slidesPerView={SwiperSlidesPerView()}

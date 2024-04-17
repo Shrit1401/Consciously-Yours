@@ -1,3 +1,4 @@
+import AboutTable from "@/components/AboutTable";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React from "react";
@@ -10,17 +11,20 @@ const About = () => {
         <div className="text-center py-20">
           <h1 className="font-medium text-5xl">About Us</h1>
           <p className="opacity-70 text-[0.8em] sm:text-[1rem]">
-            Finding Inspiration in Every Turn
+            Eco-conscious jute bags from India marrying luxury and
+            sustainability.{" "}
           </p>
         </div>
         <div className="flex justify-center items-center w-full">
           <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
-            <b>Oofy Jute</b> is a Market Leader in providing variety of class
-            Jute Bags and has also emerged as one of India's Leading Home
-            Furnishing & Lifestyle Products Brand designer offering premium and
-            designer products across multiple other categories that includes
-            Home Furnishing, Home Decor, 100% Premium Cotton Towels, Jute Bags,
-            Potli, Decorative Jute Baskets, and more.
+            Embrace eco-luxury at Consciously Yours India. Where every jute bag
+            tells a story of ethical elegance and environmental responsibility.
+            From timeless classics to contemporary marvels, our curated
+            collection embodies the essence of India's golden fibre, offering a
+            glimpse into the soul of a nation. We take pride in showcasing the
+            finest creations, handcrafted with love and exported with care to
+            adorn shoulders worldwide. Explore export opportunities from India
+            with us and let's unite as 'One Earth, One Family'.
           </div>
         </div>
         <img
@@ -30,12 +34,12 @@ const About = () => {
         />
         <div className="text-center py-20">
           <h1 className="font-medium text-5xl">Why Us?</h1>
-          <p className="opacity-70 text-[0.8em] sm:text-[1rem]">
-            because WE CARE
+          <p className="opacity-70 mt-[0.1rem] text-[0.8em] sm:text-[1rem]">
+            Because we are consciously, taking care of you
           </p>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
-              <b>Oofy Jute</b> is a Market Leader in providing variety of
+              {/* <b>Oofy Jute</b> is a Market Leader in providing variety of
               world-class jute bags to customers in India and globally. We are
               supporting the local Jute artisans and delivering the best quality
               jute bags to people worldwide so that together we can reduce the
@@ -68,45 +72,42 @@ const About = () => {
                     </b>
                   </p>
                 </div>
-              </div>
+              </div> */}
+              We are Consciously Yours, where eco-luxury intertwines with
+              artisanal aesthetics, shaping our exquisite range of jute bags,
+              proudly made in India. As allies of the green movement, our B2B
+              initiative is passionately committed to healing the planet. Each
+              bag tells a story of environmental responsibility seamlessly
+              blending style with conscientious craftsmanship. Join us as we
+              export these eco-luxurious creations worldwide, extending the
+              essence of India and inviting you to be a part of our journey
+              towards preserving our precious planet. Let us together be
+              Vasudhaiva Kutumbakam- ‘One Earth One Family’.
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h1 className="font-medium text-5xl">Why Us?</h1>
+          <div className="flex justify-center items-center w-full mt-5">
+            <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
+              <AboutTable />
             </div>
           </div>
         </div>
 
         <div className="text-center py-20">
-          <h1 className="font-medium text-5xl">Core Values</h1>
+          <h1 className="font-medium text-5xl">OUR ROOT BELIEFS</h1>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
-              <div>
-                <b>No Plastic - Conserve Environment</b>
-                <br /> Oofy Jute took it up as an initiative to make products
-                without plastic to help in conserving nature and lessen the
-                plastic nuisance this world is facing.
-              </div>
-              ​
-              <div>
-                <b>Made In India Products </b>
-                <br />
-                The Motto of starting Oofy Jute was that we wanted to build a
-                platform for "Made-in-India products only" with world-class
-                quality and that can be widely used by customers in India and
-                across Globally.
-              </div>
-              ​
-              <div>
-                <b>Innovation And Expansion</b>
-                <br /> Oofy Jute keeps the ideation, innovation and expansion on
-                high priority and continuously comes with new offerings which is
-                innovative on the global scale ​
-              </div>
-              <div>
-                <b>Go Green Initiative</b>
-                <br /> As an organization we care for the Nature & environmental
-                sustainability and try to put our best efforts in Conserving
-                Nature and drive Go Green initiatives. When you have decided to
-                purchase a Jute Bags you have joined a journey of Millions of
-                other People who care for Nature.
-              </div>
+              <ul className="list-none font-semibold">
+                <li>1. Made in India. Made for the World.</li>
+                <li>2. No plastics. Go Green.</li>
+                <li>3. Sustainability is a mindset.</li>
+                <li>4. Heal the Earth. Heal our Future.</li>
+                <li>5. Vasudhaiva Kutumbakam - One Earth One Family.</li>
+                <li>6. Conscious living is a way of life.</li>
+              </ul>
             </div>
           </div>
         </div>
