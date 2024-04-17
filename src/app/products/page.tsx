@@ -39,7 +39,10 @@ const Products = () => {
       "
       >
         {products.map((product) => (
-          <div className="flex flex-col gap-[25px] justify-center text-center w-[300px]">
+          <div
+            key={product.name}
+            className="flex flex-col gap-[25px] justify-center text-center w-[300px]"
+          >
             <img
               className="w-[300px] h-[350px] bg-cover border border-slate-200"
               src={product.img}

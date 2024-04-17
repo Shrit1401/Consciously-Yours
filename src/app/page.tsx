@@ -98,7 +98,7 @@ export default function Home() {
             className="mySwiper mt-10"
           >
             {products.map((product) => (
-              <SwiperSlide>
+              <SwiperSlide key={product.name}>
                 <img src={product.img} alt="" />
                 <div className="absolute inset-0 bg-black opacity-0 gap-5 hover:opacity-100 hover:bg-opacity-50 flex flex-col hover:backdrop-blur-lg items-center justify-center transition-all duration-150 ease-in-out cursor-pointer">
                   <h1 className="garamond text-white text-5xl">
