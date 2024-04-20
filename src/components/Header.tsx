@@ -8,7 +8,7 @@ const Header: React.FC<HeaderProps> = ({ active }) => {
   return (
     <header className="bg-[#fff2df] z-[9999] sm:flex-row flex-col flex items-center justify-around px-0 sm:px-10 py-5 w-full">
       <div className="flex items-center justify-center sm:justify-between w-full px-4 sm:px-0">
-        <img src="./logo.png" alt="" className="h-14" />
+        <img src="./logo.png" alt="" className="h-20" />
       </div>
       <ul className="sm:flex hidden w-[50%] gap-5">
         <li>

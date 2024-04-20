@@ -24,7 +24,7 @@ const About = () => {
             glimpse into the soul of a nation. We take pride in showcasing the
             finest creations, handcrafted with love and exported with care to
             adorn shoulders worldwide. Explore export opportunities from India
-            with us and let's unite as 'One Earth, One Family'.
+            with us and let's unite as 'One Earth, One Futute'.
           </div>
         </div>
         <img
