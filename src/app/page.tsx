@@ -32,14 +32,16 @@ export default function Home() {
         />
       </div>
       <AboutBox />
-      <div className="relative h-screen w-full">
-        <img
-          src="https://static.wixstatic.com/media/93357b_05dfada786514080bc8c5f7d2270f01a~mv2.png/v1/fill/w_1899,h_745,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/93357b_05dfada786514080bc8c5f7d2270f01a~mv2.png"
-          alt=""
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 text-[#fff2df] flex flex-col gap-10 items-center justify-center">
-          <h1 className="text-6xl font-bold">About Us</h1>
+      <div className="flex w-full sm:flex-row flex-col">
+        <div className="sm:w-1/2 w-full">
+          <img
+            src="https://i.postimg.cc/Jn4kVv2n/99204139-l-normal-none.jpg"
+            alt=""
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="sm:w-1/2 w-full bg-[#111] text-[#fff2df] flex gap-10 py-12 flex-col items-center justify-center">
+          <h1 className="text-7xl font-bold roch tracking-widest">About Us</h1>
           <p className="text-center w-[90%] sm:w-3/4 leading-relaxed text-lg">
             Embrace eco-luxury at Consciously Yours India. Where every jute bag
             tells a story of ethical elegance and environmental responsibility.
@@ -59,8 +61,10 @@ export default function Home() {
       </div>
 
       <div className="my-16">
-        <div className="flex gap-2 justify-center flex-col items-center">
-          <h1 className="text-4xl font-semibold">Our Products</h1>
+        <div className="flex gap-8 justify-center flex-col items-center">
+          <h1 className="sm:text-8xl text-6xl font-semibold roch">
+            Our Products
+          </h1>
           <p className="text-center">
             Select your desired product to initiate direct communication with us
             via WhatsApp.

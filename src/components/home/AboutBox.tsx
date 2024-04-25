@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutBox = () => {
   return (
-    <div className="flex justify-center items-center w-full h-[70vh] sm:h-[40vh]">
-      <p className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
+    <div className="flex justify-center items-center w-full h-[100vh] sm:h-[50vh]">
+      <p className="text-center w-[40rem] sm:w-3/4 leading-relaxed text-2xl font-semibold text-[#6F4119]">
         Step into the realm of sustainable sophistication! We believe in the
         timeless appeal of jute, offering to eco-conscious alternatives for
         fashion-forward consumers around the globe. From chic totes to versatile
