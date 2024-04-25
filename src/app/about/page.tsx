@@ -17,7 +17,7 @@ const About = () => {
         </div>
         <div className="flex justify-center items-center w-full">
           <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
-            Embrace eco-luxury at Consciously Yours India. Where every jute bag
+            Embrace eco-luxury at Consciously Yours, India. Where every jute bag
             tells a story of ethical elegance and environmental responsibility.
             From timeless classics to contemporary marvels, our curated
             collection embodies the essence of India's golden fibre, offering a

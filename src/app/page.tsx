@@ -5,25 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Pagination, Autoplay } from "swiper/modules";
 import Footer from "@/components/Footer";
-
-const products = [
-  {
-    name: "Product 1",
-    img: "https://www.thegiftingmarketplace.in/cdn/shop/products/Addaheading_10_a4ce2ed0-c78e-4db5-9b51-acdd9509f813.png?v=1681453844",
-  },
-  {
-    name: "Product 2",
-    img: "https://5.imimg.com/data5/SELLER/Default/2023/7/321446208/QX/SP/ER/1801251/jute-flower-bags-500x500.png",
-  },
-  {
-    name: "Product 3",
-    img: "https://www.promotionalwears.com/image/cache/catalog/data/eco-friendly/bags/pjb005-front-img-500x500.jpg",
-  },
-  {
-    name: "Product 4",
-    img: "https://corporate.goshopia.com/wp-content/uploads/2022/08/32-Jute-Bags-scaled.jpg",
-  },
-];
+import { products } from "../../data";
 
 export default function Home() {
   const SwiperSlidesPerView = () => {
@@ -68,7 +50,7 @@ export default function Home() {
             finest creations, handcrafted with love, and exported with care to
             adorn shoulders worldwide.
             <br /> Explore export opportunities from India with us and let's
-            unite as Vasudhaiva Kutumbakam 'One Earth, One Family'.
+            unite as Vasudhaiva Kutumbakam 'One Earth, One Future'.
           </p>
           <a href="#" className="btn">
             Know More About Us
@@ -105,7 +87,11 @@ export default function Home() {
           >
             {products.map((product) => (
               <SwiperSlide key={product.name}>
-                <img src={product.img} alt="" />
+                <img
+                  className="h-[28rem] w-[28rem] object-contain"
+                  src={product.img}
+                  alt=""
+                />
                 <div className="absolute inset-0 bg-black opacity-0 gap-5 hover:opacity-100 hover:bg-opacity-50 flex flex-col hover:backdrop-blur-lg items-center justify-center transition-all duration-150 ease-in-out cursor-pointer">
                   <h1 className="garamond text-white text-5xl">
                     {product.name}

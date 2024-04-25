@@ -1,25 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React from "react";
-
-const products = [
-  {
-    name: "Product 1",
-    img: "https://www.thegiftingmarketplace.in/cdn/shop/products/Addaheading_10_a4ce2ed0-c78e-4db5-9b51-acdd9509f813.png?v=1681453844",
-  },
-  {
-    name: "Product 2",
-    img: "https://5.imimg.com/data5/SELLER/Default/2023/7/321446208/QX/SP/ER/1801251/jute-flower-bags-500x500.png",
-  },
-  {
-    name: "Product 3",
-    img: "https://www.promotionalwears.com/image/cache/catalog/data/eco-friendly/bags/pjb005-front-img-500x500.jpg",
-  },
-  {
-    name: "Product 4",
-    img: "https://corporate.goshopia.com/wp-content/uploads/2022/08/32-Jute-Bags-scaled.jpg",
-  },
-];
+import { products } from "../../../data";
 
 const Products = () => {
   return (
