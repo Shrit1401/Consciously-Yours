@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import Footer from "@/components/Footer";
 import { products } from "../../data";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const SwiperSlidesPerView = () => {
@@ -20,9 +21,14 @@ export default function Home() {
     }
   };
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Header active="home" />
-      <div className="relative h-screen w-full">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative h-screen w-full"
+      >
         <video
           src="https://video.wixstatic.com/video/93357b_0be5dcdfeebb46bda690c75076b2f9e6/1080p/mp4/file.mp4"
           autoPlay
@@ -30,9 +36,14 @@ export default function Home() {
           muted
           className="h-full w-full object-cover"
         />
-      </div>
+      </motion.div>
       <AboutBox />
-      <div className="flex w-full sm:flex-row flex-col">
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 50 }}
+        className="flex w-full sm:flex-row flex-col"
+      >
         <div className="sm:w-1/2 w-full">
           <img
             src="https://i.postimg.cc/Jn4kVv2n/99204139-l-normal-none.jpg"
@@ -54,11 +65,11 @@ export default function Home() {
             <br /> Explore export opportunities from India with us and let's
             unite as Vasudhaiva Kutumbakam 'One Earth, One Future'.
           </p>
-          <a href="#" className="btn">
+          <a href="/about" className="btn">
             Know More About Us
           </a>
         </div>
-      </div>
+      </motion.div>
 
       <div className="my-16">
         <div className="flex gap-8 justify-center flex-col items-center">
@@ -89,21 +100,32 @@ export default function Home() {
             }}
             className="mySwiper mt-10"
           >
-            {products.map((product) => (
+            {products.map((product, index) => (
               <SwiperSlide key={product.name}>
-                <img
-                  className="h-[28rem] w-[28rem] object-contain"
-                  src={product.img}
-                  alt=""
-                />
-                <div className="absolute inset-0 bg-black opacity-0 gap-5 hover:opacity-100 hover:bg-opacity-50 flex flex-col hover:backdrop-blur-lg items-center justify-center transition-all duration-150 ease-in-out cursor-pointer">
-                  <h1 className="garamond text-white text-5xl">
-                    {product.name}
-                  </h1>
-                  <a href="#" className="btn">
-                    Connect with us
-                  </a>
-                </div>
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 50,
+                    duration: 1,
+                    delay: index * 0.1,
+                  }}
+                >
+                  <img
+                    className="h-[28rem] w-[28rem] object-contain"
+                    src={product.img}
+                    alt=""
+                  />
+                  <div className="absolute inset-0 bg-black opacity-0 gap-5 hover:opacity-100 hover:bg-opacity-50 flex flex-col hover:backdrop-blur-lg items-center justify-center transition-all duration-150 ease-in-out cursor-pointer">
+                    <h1 className="garamond text-white text-5xl">
+                      {product.name}
+                    </h1>
+                    <a href="#" className="btn">
+                      Connect with us
+                    </a>
+                  </div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>

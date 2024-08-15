@@ -1,6 +1,8 @@
+"use client";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React from "react";
+import { motion } from "framer-motion";
 import { products } from "../../../data";
 
 const Products = () => {
@@ -20,8 +22,11 @@ const Products = () => {
       gap-20 justify-center items-center w-full pb-20
       "
       >
-        {products.map((product) => (
-          <div
+        {products.map((product, index) => (
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 50, delay: index * 0.1 }}
             key={product.name}
             className="flex flex-col gap-[25px] justify-center text-center w-[300px]"
           >
@@ -36,7 +41,7 @@ const Products = () => {
                 Request A Quotation
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
       <Footer />

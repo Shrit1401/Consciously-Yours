@@ -1,21 +1,32 @@
+"use client";
 import AboutTable from "@/components/AboutTable";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <>
+    <main>
       <Header active="about" />
-      <main className="mx-5 sm:mx-0">
-        <div className="text-center py-20">
+      <div className="mx-5 sm:mx-0">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center py-20"
+        >
           <h1 className="font-medium text-5xl">About Us</h1>
           <p className="opacity-70 text-[0.8em] sm:text-[1rem]">
             Eco-conscious jute bags from India marrying luxury and
             sustainability.{" "}
           </p>
-        </div>
-        <div className="flex justify-center items-center w-full">
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ type: "tween", ease: "easeInOut" }}
+          className="flex justify-center items-center w-full"
+        >
           <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
             Embrace eco-luxury at Consciously Yours, India. Where every jute bag
             tells a story of ethical elegance and environmental responsibility.
@@ -26,13 +37,19 @@ const About = () => {
             adorn shoulders worldwide. Explore export opportunities from India
             with us and let's unite as 'One Earth, One Futute'.
           </div>
-        </div>
-        <img
+        </motion.div>
+        <motion.img
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           src="https://static.wixstatic.com/media/93357b_0b75ec457ab548b58b4d0a95fa36b089~mv2.png/v1/fill/w_1366,h_478,al_c,q_90,enc_auto/93357b_0b75ec457ab548b58b4d0a95fa36b089~mv2.png"
           className="w-full bg-cover py-10"
           alt=""
         />
-        <div className="text-center py-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-center py-20"
+        >
           <h1 className="font-medium text-5xl">Why Us?</h1>
           <p className="opacity-70 mt-[0.1rem] text-[0.8em] sm:text-[1rem]">
             Because we are consciously, taking care of you
@@ -85,18 +102,26 @@ const About = () => {
               Vasudhaiva Kutumbakam- ‘One Earth One Family’.
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-center"
+        >
           <h1 className="font-medium text-5xl">Why Us?</h1>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
               <AboutTable />
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="text-center py-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-center py-20"
+        >
           <h1 className="font-medium text-5xl">OUR ROOT BELIEFS</h1>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
@@ -110,10 +135,10 @@ const About = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </main>
+        </motion.div>
+      </div>
       <Footer />
-    </>
+    </main>
   );
 };
 
