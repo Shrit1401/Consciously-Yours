@@ -9,9 +9,8 @@ import React from "react";
 const Contact = () => {
   return (
     <main>
-      <Header active="contact" />
       <div className="text-center pt-10">
-        <h1 className="font-medium text-5xl">Contact Us</h1>
+        <h1 className="font-medium text-7xl roch">Contact Us</h1>
         <p className="opacity-70 text-[0.8em] sm:text-[1rem]">Let's Connect</p>
         <div className="flex justify-center bg-[#fff2df] px-12 py-12 mt-5">
           <div className="flex sm:flex-row flex-col flex-wrap justify-between gap-16 ">
@@ -58,7 +57,6 @@ const Contact = () => {
           loading="lazy"
         />
       </div>
-      <Footer />
     </main>
   );
 };

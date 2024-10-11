@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import "../app/globals.css";
+import Header from "@/components/Header";
+
 import "swiper/css";
 import "swiper/css/pagination";
+import Footer from "@/components/Footer";
+import BirdFly from "@/components/BirdFly";
 
 export const metadata: Metadata = {
   title: "Consciously Yours",
@@ -16,7 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header active="home" />
+
+        {children}
+        <BirdFly />
+        <Footer />
+      </body>
     </html>
   );
 }

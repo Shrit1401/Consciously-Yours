@@ -1,22 +1,20 @@
 "use client";
-import AboutTable from "@/components/AboutTable";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import AboutTable from "@/components/home/AboutTable";
+
 import React from "react";
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <main>
-      <Header active="about" />
       <div className="mx-5 sm:mx-0">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="text-center py-20"
         >
-          <h1 className="font-medium text-5xl">About Us</h1>
-          <p className="opacity-70 text-[0.8em] sm:text-[1rem]">
+          <h1 className="font-medium text-7xl roch">About Us</h1>
+          <p className="text-center font-[600] text-xl">
             Eco-conscious jute bags from India marrying luxury and
             sustainability.{" "}
           </p>
@@ -27,7 +25,7 @@ const About = () => {
           transition={{ type: "tween", ease: "easeInOut" }}
           className="flex justify-center items-center w-full"
         >
-          <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
+          <div className="text-center w-full sm:w-3/4 leading-relaxed font-[600] text-xl text-[#6F4119]">
             Embrace eco-luxury at Consciously Yours, India. Where every jute bag
             tells a story of ethical elegance and environmental responsibility.
             From timeless classics to contemporary marvels, our curated
@@ -50,46 +48,12 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           className="text-center py-20"
         >
-          <h1 className="font-medium text-5xl">Why Us?</h1>
-          <p className="opacity-70 mt-[0.1rem] text-[0.8em] sm:text-[1rem]">
+          <h1 className="font-medium text-7xl roch">Why Us?</h1>
+          <p className="text-center font-[600] text-xl">
             Because we are consciously, taking care of you
           </p>
           <div className="flex justify-center items-center w-full mt-5">
-            <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
-              {/* <b>Oofy Jute</b> is a Market Leader in providing variety of
-              world-class jute bags to customers in India and globally. We are
-              supporting the local Jute artisans and delivering the best quality
-              jute bags to people worldwide so that together we can reduce the
-              usage of plastic bags and replace it with eco-friendly jute bags.
-              Our jute bags are 100% natural and helps in protecting environment
-              and conserving nature.
-              <div className="text-left">
-                <ul className="list-disc">
-                  <li>Wide Range of Premium Jute Bags</li>
-                  <li>World Class Quality</li>
-                  <li>Eco-friendly & Sustainable Products</li>
-                  <li>Quality Assurance</li>
-                  <li>Best Customer Support</li>
-                </ul>
-                <div className="mt-5">
-                  <b>Most Trusted name for High Quality Products:</b>
-                  <p>
-                    <b>Oofy Jute </b>is one of the most Trusted name for
-                    High-Quality Jute Bags, Luxury Trays, Jute Baskets & more.
-                    Oofy Jute is a Market Leader in providing variety of world
-                    class Jute Bags and has also emerged as one of India's
-                    Leading Home Decor & Lifestyle Products Brand designer
-                    offering premium and designer products across multiple other
-                    categories
-                    <b>
-                      Our Focus is to provide the best quality, best prices, and
-                      timely delivery of world class Jute Bags and more Premium
-                      Eco-Friendly & Fashionable Products to our customers in
-                      India and Globally.
-                    </b>
-                  </p>
-                </div>
-              </div> */}
+            <div className="text-center w-full sm:w-3/4 leading-relaxed text-xl font-[600] text-[#6F4119]">
               We are Consciously Yours, where eco-luxury intertwines with
               artisanal aesthetics, shaping our exquisite range of jute bags,
               proudly made in India. As allies of the green movement, our B2B
@@ -109,9 +73,9 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           className="text-center"
         >
-          <h1 className="font-medium text-5xl">Why Us?</h1>
+          <h1 className="font-medium text-7xl roch">We Are</h1>
           <div className="flex justify-center items-center w-full mt-5">
-            <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
+            <div className="text-center w-full sm:w-3/4 leading-relaxed text-xl font-[600] text-[#6F4119]">
               <AboutTable />
             </div>
           </div>
@@ -122,9 +86,9 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           className="text-center py-20"
         >
-          <h1 className="font-medium text-5xl">OUR ROOT BELIEFS</h1>
+          <h1 className="font-medium text-7xl   och">Our Root Beliefs</h1>
           <div className="flex justify-center items-center w-full mt-5">
-            <div className="text-center w-full sm:w-3/4 leading-relaxed text-lg text-[#6F4119]">
+            <div className="text-center font-[600] w-full sm:w-3/4 leading-relaxed text-xl text-[#6F4119]">
               <ul className="list-none font-semibold">
                 <li>1. Made in India. Made for the World.</li>
                 <li>2. No plastics. Go Green.</li>
@@ -137,7 +101,6 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-      <Footer />
     </main>
   );
 };

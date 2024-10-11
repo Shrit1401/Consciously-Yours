@@ -55,7 +55,7 @@ const AboutTable = () => {
   ];
 
   return (
-    <Table className="border 1px solid border-black border-opacity-35 rounded-full">
+    <Table className="border 1px solid bg-[##759260] font-[600] text-lg border-black border-opacity-35 rounded-full">
       <TableBody>
         {data.map((item, index) => (
           <TableRow key={index}>
