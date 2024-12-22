@@ -34,15 +34,17 @@ export default function Home() {
         transition={{ duration: 1 }}
         className="relative h-screen w-full"
       >
-        <img
-          src={
-            window.innerWidth > 768
-              ? "./landing-big.png"
-              : "./landing-small.png"
-          }
-          alt=""
-          className="h-full w-full object-cover"
-        />
+        {typeof window !== "undefined" && (
+          <img
+            src={
+              window.innerWidth > 768
+                ? "./landing-big.png"
+                : "./landing-small.png"
+            }
+            alt=""
+            className="h-full w-full object-cover"
+          />
+        )}
       </motion.div>
       <AboutBox />
       <AboutComponent />
