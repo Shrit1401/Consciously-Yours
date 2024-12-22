@@ -1,11 +1,12 @@
 "use client";
 import AboutBox from "@/components/home/AboutBox";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Header from "@/components/Header";
+import BirdFly from "@/components/BirdFly";
 import { Pagination, Autoplay } from "swiper/modules";
-import Footer from "@/components/Footer";
 import { products } from "../../data";
 import { motion } from "framer-motion";
+import AboutComponent from "@/components/home/AboutComponent";
 
 export default function Home() {
   const SwiperSlidesPerView = () => {
@@ -18,73 +19,49 @@ export default function Home() {
         return 1;
       }
     }
+    return 1;
   };
+
   return (
     <main className="overflow-x-hidden">
+      <div className="bg-[#341F18]">
+        <BirdFly />
+        <Header active="home" />
+      </div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         className="relative h-screen w-full"
       >
-        <video
-          src="https://video.wixstatic.com/video/93357b_0be5dcdfeebb46bda690c75076b2f9e6/1080p/mp4/file.mp4"
-          autoPlay
-          loop
-          muted
+        <img
+          src={
+            window.innerWidth > 768
+              ? "./landing-big.png"
+              : "./landing-small.png"
+          }
+          alt=""
           className="h-full w-full object-cover"
         />
       </motion.div>
       <AboutBox />
-      <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 50 }}
-        className="flex w-full sm:flex-row flex-col"
-      >
-        <div className="sm:w-1/2 w-full">
-          <img
-            src="https://i.postimg.cc/Jn4kVv2n/99204139-l-normal-none.jpg"
-            alt=""
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="sm:w-1/2 w-full bg-[#759260] text-[#040316] flex gap-10 py-12 flex-col items-center justify-center">
-          <h1 className="text-7xl font-bold roch tracking-widest">About Us</h1>
-          <p className="text-center w-[90%] sm:w-3/4 leading-relaxed font-bold text-lg">
-            Embrace eco-luxury at Consciously Yours India. Where every jute bag
-            tells a story of ethical elegance and environmental responsibility.
-            <br />
-            From timeless classics to contemporary marvels, our curated
-            collection embodies the essence of India's golden fibre, offering a
-            glimpse into the soul of a nation. We take pride in showcasing the
-            finest creations, handcrafted with love, and exported with care to
-            adorn shoulders worldwide.
-            <br /> Explore export opportunities from India with us and let's
-            unite as Vasudhaiva Kutumbakam 'One Earth, One Future'.
-          </p>
-          <a href="/about" className="btn">
-            Know More About Us
-          </a>
-        </div>
-      </motion.div>
-
+      <AboutComponent />
       <div className="my-16">
         <div className="flex gap-8 justify-center flex-col items-center">
           <h1 className="sm:text-8xl text-6xl font-semibold roch">
             Our Products
           </h1>
-          <p className="text-center font-[600] text-xl">
+          <p className="text-center font-[600] text-xl px-4">
             Select your desired product to initiate direct communication with us
             via WhatsApp.
             <br /> You may also direct your inquiries to our team by contacting
             us at{" "}
             <a
               className="underline underline-offset-4"
-              href="mailto:Consciously.yours111@gmail.com "
+              href="mailto:Consciously.yours111@gmail.com"
             >
-              Consciously.yours111@gmail.com{" "}
-            </a>{" "}
+              Consciously.yours111@gmail.com
+            </a>
           </p>
           <Swiper
             slidesPerView={SwiperSlidesPerView()}
@@ -109,9 +86,10 @@ export default function Home() {
                     duration: 1,
                     delay: index * 0.1,
                   }}
+                  className="px-4 py-4 relative"
                 >
                   <img
-                    className="h-[28rem] w-[28rem] object-contain"
+                    className="h-[28rem] w-[28rem] object-cover rounded-md"
                     src={product.img}
                     alt=""
                   />

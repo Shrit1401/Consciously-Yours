@@ -1,30 +1,38 @@
 export const products = [
   {
-    name: "Product 1",
-    img: "https://corporate.goshopia.com/wp-content/uploads/2022/08/32-Jute-Bags-scaled.jpg",
+    name: "Jute Tote Bag",
+    img: "https://i.imgur.com/L0QiOHX.jpeg",
   },
   {
-    name: "Product 2",
-    img: "https://5.imimg.com/data5/SELLER/Default/2023/7/321446208/QX/SP/ER/1801251/jute-flower-bags-500x500.png",
+    name: "Jute Tote Bag",
+    img: "https://i.imgur.com/gMrAY2C.jpeg",
   },
   {
-    name: "Product 3",
-    img: "https://www.promotionalwears.com/image/cache/catalog/data/eco-friendly/bags/pjb005-front-img-500x500.jpg",
+    name: "Jute Hand Bag",
+    img: "https://i.imgur.com/YFE4WQN.jpeg",
   },
   {
-    name: "Product 4",
-    img: "https://corporate.goshopia.com/wp-content/uploads/2022/08/32-Jute-Bags-scaled.jpg",
+    name: "Jute Hand Bag",
+    img: "https://i.imgur.com/enZHMLg.jpeg",
   },
   {
-    name: "Product 6",
-    img: "https://5.imimg.com/data5/SELLER/Default/2023/7/321446208/QX/SP/ER/1801251/jute-flower-bags-500x500.png",
+    name: "Jute Sling Bag",
+    img: "https://i.imgur.com/SdIgubJ.jpeg",
   },
   {
-    name: "Product 7",
-    img: "https://www.promotionalwears.com/image/cache/catalog/data/eco-friendly/bags/pjb005-front-img-500x500.jpg",
+    name: "Jute Sling Bag",
+    img: "https://i.imgur.com/IRtPSw4.jpeg",
   },
   {
-    name: "Product 8",
-    img: "https://corporate.goshopia.com/wp-content/uploads/2022/08/32-Jute-Bags-scaled.jpg",
+    name: "Jute Sling Bag",
+    img: "https://i.imgur.com/T17pN6b.jpeg",
+  },
+  {
+    name: "Jute Lunch Bag",
+    img: "https://i.imgur.com/3pNjpVx.jpeg",
+  },
+  {
+    name: "Jute Pouch Bag",
+    img: "https://i.imgur.com/daj3QpB.jpeg",
   },
 ];

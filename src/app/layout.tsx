@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import "../app/globals.css";
-import Header from "@/components/Header";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import Footer from "@/components/Footer";
-import BirdFly from "@/components/BirdFly";
+import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Consciously Yours",
@@ -21,10 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header active="home" />
-
         {children}
-        <BirdFly />
+
+        <CTA />
         <Footer />
       </body>
     </html>

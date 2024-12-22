@@ -1,14 +1,14 @@
-{
-  /* <iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=unnamed%20road,%20Anand%20Vihar,%20-%20110092,%20Delhi,%20India%20Kaushambi,%20Ghaziabad+(unnamed%20road,%20Anand%20Vihar,%20-%20110092,%20Delhi,%20India)&amp;t=&amp;z=7&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://www.acadoo.de/'>Ghostwriter</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=adc6aaf0686813976b064188b9eca0e442b85538'></script> */
-}
-
-import Footer from "@/components/Footer";
+import BirdFly from "@/components/BirdFly";
 import Header from "@/components/Header";
 import React from "react";
 
 const Contact = () => {
   return (
     <main>
+      <div className="bg-[#341F18]">
+        <BirdFly />
+        <Header active="contact" />
+      </div>
       <div className="text-center pt-10">
         <h1 className="font-medium text-7xl roch">Contact Us</h1>
         <p className="opacity-70 text-[0.8em] sm:text-[1rem]">Let's Connect</p>

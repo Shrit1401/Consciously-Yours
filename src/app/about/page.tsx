@@ -3,10 +3,16 @@ import AboutTable from "@/components/home/AboutTable";
 
 import React from "react";
 import { motion } from "framer-motion";
+import BirdFly from "@/components/BirdFly";
+import Header from "@/components/Header";
 
 const About = () => {
   return (
     <main>
+      <div className="bg-[#341F18]">
+        <BirdFly />
+        <Header active="about" />
+      </div>
       <div className="mx-5 sm:mx-0">
         <motion.div
           initial={{ opacity: 0 }}
@@ -86,7 +92,7 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           className="text-center py-20"
         >
-          <h1 className="font-medium text-7xl   och">Our Root Beliefs</h1>
+          <h1 className="font-bold text-7xl roch">Our Root Beliefs</h1>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="text-center font-[600] w-full sm:w-3/4 leading-relaxed text-xl text-[#6F4119]">
               <ul className="list-none font-semibold">
