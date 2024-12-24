@@ -99,12 +99,7 @@ export default function Home() {
                     <h1 className="garamond text-white text-5xl">
                       {product.name}
                     </h1>
-                    <a
-                      href={`https://wa.me/9971155921?text=${encodeURIComponent(
-                        `Hello, I am interested in the ${product.name}. Can I get a quotation, please?`
-                      )}`}
-                      className="btn"
-                    >
+                    <a href={`/products/${product.slug}`} className="btn">
                       Connect with us
                     </a>
                   </div>
