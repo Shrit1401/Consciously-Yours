@@ -46,6 +46,19 @@ const Contact = () => {
                 </a>
               </p>
             </div>
+            <div className="text-[#6F4119] flex flex-col justify-start text-left sm:w-[35%] w-[100%] gap-3">
+              <img src="./email.svg" className="w-8" alt="" />
+              <h2 className="font-bold text-xl">Instagram</h2>
+              <p>
+                <a
+                  className="underline underline-offset-4"
+                  target="_blank"
+                  href="https://www.instagram.com/consciously_yours111/?igsh=NTA4YmZvdnFiNnZv"
+                >
+                  consciously_yours111
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

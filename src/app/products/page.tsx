@@ -41,14 +41,11 @@ const Products = () => {
             <h2 className="font-bold text-2xl">{product.name}</h2>
             <div className="w-[300px]">
               <a
-                href={`https://wa.me/9971155921?text=${encodeURIComponent(
-                  `Hello, I am interested in the ${product.name}. Can I get a quotation, please?`
-                )}`}
+                href={`/products/${product.slug}`}
                 className="btn"
-                target="_blank"
                 rel="noopener noreferrer"
               >
-                Request A Quotation
+                Learn More
               </a>
             </div>
           </motion.div>

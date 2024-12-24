@@ -1,10 +1,17 @@
 import React from "react";
 
-const BirdFly = () => {
+type BirdFlyProps = {
+  notheight?: boolean;
+};
+
+const BirdFly = ({ notheight }: BirdFlyProps) => {
   return (
-    <div style={{ display: "flex", height: "2vh" }} className="pb-8">
+    <div
+      style={{ display: "flex", height: notheight ? "auto" : "2vh" }}
+      className=""
+    >
       <img
-        src="./bird.gif"
+        src="./../bird.gif"
         style={{
           overflowX: "hidden",
         }}

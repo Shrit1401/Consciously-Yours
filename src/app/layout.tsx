@@ -4,7 +4,7 @@ import "../app/globals.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import Footer from "@/components/Footer";
-import CTA from "@/components/CTA";
+import BirdFly from "@/components/BirdFly";
 
 export const metadata: Metadata = {
   title: "Consciously Yours",
@@ -22,8 +22,10 @@ export default function RootLayout({
       <body>
         {children}
 
-        <CTA />
-        <Footer />
+        <div className="bg-[#341F18] z-[999]">
+          <Footer />
+          <BirdFly notheight />
+        </div>
       </body>
     </html>
   );

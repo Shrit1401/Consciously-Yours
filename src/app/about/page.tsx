@@ -95,13 +95,13 @@ const About = () => {
           <h1 className="font-bold text-7xl roch">Our Root Beliefs</h1>
           <div className="flex justify-center items-center w-full mt-5">
             <div className="text-center font-[600] w-full sm:w-3/4 leading-relaxed text-xl text-[#6F4119]">
-              <ul className="list-none font-semibold">
-                <li>1. Made in India. Made for the World.</li>
-                <li>2. No plastics. Go Green.</li>
-                <li>3. Sustainability is a mindset.</li>
-                <li>4. Heal the Earth. Heal our Future.</li>
-                <li>5. Vasudhaiva Kutumbakam - One Earth One Family.</li>
-                <li>6. Conscious living is a way of life.</li>
+              <ul className="list-disc list-inside font-semibold">
+                <li> Made in India. Made for the World.</li>
+                <li>No plastics. Go Green.</li>
+                <li> Sustainability is a mindset.</li>
+                <li> Heal the Earth. Heal our Future.</li>
+                <li> Vasudhaiva Kutumbakam - One Earth One Family.</li>
+                <li> Conscious living is a way of life.</li>
               </ul>
             </div>
           </div>
