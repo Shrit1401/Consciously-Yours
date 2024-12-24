@@ -2,34 +2,33 @@
 import BirdFly from "@/components/BirdFly";
 import Header from "@/components/Header";
 import { useParams, useRouter } from "next/navigation";
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { products } from "../../../../data";
-import { Swiper } from "swiper/react";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const ProductInfo = () => {
   const { productSlug } = useParams();
   const router = useRouter();
 
   const product = products.find((item) => item.slug === productSlug);
-
-  if (!product) {
-    useEffect(() => {
-      router.push("/");
-    }, []);
-    return null;
-  }
-
   const [selectedImage, setSelectedImage] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Redirect to home if product is not found
+  useEffect(() => {
+    if (!product) {
+      router.push("/");
+    }
+  }, [product, router]);
+
+  // Set initial selected image
   useEffect(() => {
     if (product) {
       setSelectedImage(product.images[0]);
     }
   }, [product]);
 
+  // Change image at intervals
   useEffect(() => {
     if (product) {
       const interval = setInterval(() => {
@@ -40,11 +39,17 @@ const ProductInfo = () => {
     }
   }, [product]);
 
+  // Update selected image based on current index
   useEffect(() => {
     if (product) {
       setSelectedImage(product.images[currentIndex]);
     }
   }, [currentIndex, product]);
+
+  if (!product) {
+    // Return null to avoid rendering issues before redirect
+    return null;
+  }
 
   return (
     <main>
