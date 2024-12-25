@@ -11,7 +11,7 @@ const Products = () => {
     <main>
       <div className="bg-[#341F18]">
         <BirdFly />
-        <Header active="product" />
+        <Header active="products" />
       </div>
       <div className="text-center py-20">
         <h1 className="font-medium text-7xl roch">Our Products</h1>

@@ -55,7 +55,7 @@ const ProductInfo = () => {
     <main>
       <div className="bg-[#341F18]">
         <BirdFly />
-        <Header active="contact" />
+        <Header active="products" />
       </div>
 
       <section className="p-8">
@@ -70,7 +70,7 @@ const ProductInfo = () => {
                     alt="Product Image"
                     width={500}
                     height={500}
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full"
                   />
                 </div>
                 <div className="mt-4">
@@ -81,7 +81,7 @@ const ProductInfo = () => {
                       setSelectedImage(product.images[swiper.activeIndex])
                     }
                   >
-                    {product.images.map((image, index) => (
+                    {product.images.slice(0, 6).map((image, index) => (
                       <SwiperSlide key={index}>
                         <button
                           onClick={() => setSelectedImage(image)}

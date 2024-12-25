@@ -3,7 +3,7 @@ import React from "react";
 import logo from "@/../public/logo-white.png";
 
 interface HeaderProps {
-  active: "home" | "product" | "about" | "contact" | "gallery";
+  active: "home" | "products" | "about" | "contact" | "gallery";
 }
 
 const navItems = [

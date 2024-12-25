@@ -47,7 +47,7 @@ const Contact = () => {
               </p>
             </div>
             <div className="text-[#6F4119] flex flex-col justify-start text-left sm:w-[35%] w-[100%] gap-3">
-              <img src="./email.svg" className="w-8" alt="" />
+              <img src="./instagram.svg" className="w-8" alt="" />
               <h2 className="font-bold text-xl">Instagram</h2>
               <p>
                 <a
