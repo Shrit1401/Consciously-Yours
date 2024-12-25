@@ -24,7 +24,7 @@ const Contact = () => {
             </div>
             <div className="text-[#6F4119] flex flex-col justify-start text-left sm:w-[35%] w-[100%] gap-3">
               <img src="./call.svg" className="w-8" alt="" />
-              <h2 className="font-bold text-xl">Phone</h2>
+              <h2 className="font-bold text-xl">Whatsapp</h2>
               <p>
                 <a
                   className="underline underline-offset-4"
